@@ -16,6 +16,14 @@
             padding: 20px;
             text-align: center;
         }
+        .contact {
+            margin-top: 10px;
+        }
+        .contact a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
         .content {
             max-width: 800px;
             margin: 0 auto;
@@ -28,7 +36,10 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1 {
+            color: #f6eded;
+        }
+        h2 { 
             color: #333;
         }
         nav a {
@@ -36,16 +47,49 @@
             color: white;
             text-decoration: none;
         }
+        .profile-pic {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile-pic img {
+            max-width: 200px;
+            border-radius: 30%;
+        }
+        .profile-pic figcaption {
+            font-style: italic;
+            font-size: 0.8em;
+            color: #666;
+        }
+        .supplementary-pic {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .supplementary-pic img {
+            max-width: 300px;
+            border-radius: 10%;
+        }
+        .supplementary-pic figcaption {
+            font-style: italic;
+            font-size: 0.8em;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <h1>Nicko Corriveau</h1>
+        <div class="profile-pic">
+            <img src="images/faceshot.jpg" alt="Profile Picture">
+        </div>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#education-career">Education & Career</a>
         </nav>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/nicko-corriveau-96a553121/" target="_blank">LinkedIn</a>
+            <a href="mailto:ncorriveau13@gmail.com">Email</a>
+        </div>
     </header>
 
     <section id="about">
@@ -66,6 +110,10 @@
 
     <section id="projects">
         <h2>Projects 👨🏻‍💻 </h2>
+        <div class="supplementary-pic">
+            <img src="images/profile.jpeg" alt="Profile Picture">
+            <figcaption>Giving a talk on Transformers at <a href="https://med.virginia.edu/advanced-medical-analytics/">UVA Center for Advanced Medical Analytics</a></figcaption>
+        </div>
         <p>Here are some of the projects I've worked on: </p>
         <ul>
             <li>🤓<a href="https://github.com/ncorriveau/math_helpers"> Walk thrus of concepts from Bayesian Inference to Energy Based DL on simple Manifolds</a></li>
