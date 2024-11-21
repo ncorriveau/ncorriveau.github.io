@@ -1,0 +1,5 @@
+.container {
+    max-width: 60ch; /* 60 characters wide */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding for better readability */
+}

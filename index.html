@@ -3,130 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .contact {
-            margin-top: 10px;
-        }
-        .contact a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #f6eded;
-        }
-        h2 { 
-            color: #333;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-        }
-        .profile-pic {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .profile-pic img {
-            max-width: 200px;
-            border-radius: 30%;
-        }
-        .profile-pic figcaption {
-            font-style: italic;
-            font-size: 0.8em;
-            color: #666;
-        }
-        .supplementary-pic {
-            text-align: left;
-            margin: 20px 0;
-        }
-        .supplementary-pic img {
-            max-width: 300px;
-            border-radius: 10%;
-        }
-        .supplementary-pic figcaption {
-            font-style: italic;
-            font-size: 0.8em;
-            color: #666;
-        }
-    </style>
+    <title>Nicko Corriveau</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <header>
-        <h1>Nicko Corriveau</h1>
-        <div class="profile-pic">
-            <img src="images/faceshot.jpg" alt="Profile Picture">
-        </div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#education-career">Education & Career</a>
-        </nav>
-        <div class="contact">
-            <a href="https://www.linkedin.com/in/nicko-corriveau-96a553121/" target="_blank">LinkedIn</a>
-            <a href="mailto:ncorriveau13@gmail.com">Email</a>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Nicko Corriveau</h1>
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/nicko-corriveau-96a553121/" target="_blank">LinkedIn</a>
+                <a href="mailto:ncorriveau13@gmail.com">Email</a>
+                <a href="https://x.com/ncorriveau123">Twitter</a>
+            </div>
+        </header>
 
-    <section id="about">
-        <h2>About 😀 </h2>
-        <p>I am a self taught software engineer, currently working at <a href="https://www.quantile.com/">Quantile</a>, a computational finance company focused on large scale optimization problems (acquired by lseg). I am passionate about learning new subjects with a particular focus on applied math, computing, machine learning & AI. My focus over the past couple of years has been on machine learning and deep learning and data efficient software systems. As part of my learning, I love to create guides that help me (and hopefully others) understand what can sometimes be considered opaque and difficult subjects. I plan on using this page to showcase some of that work, as well as write about my journey into a software engineering through self study.
-            <p>I have a MS from Columbia Engineering in Operations Research with a focus on ML / AI and a BS from the University of Virginia 
-            where I studied finance and math. Growing up, I played soccer ⚽️ at a very high level culminating in four years of Varsity Men's Soccer at UVA, which included a 
-            a trip to the NCAA Final Four in 2013 and a National Championship in 2014.</p>
-    </section>
+        <section id="about">
+            <h2>About 😀 </h2>
+            <p>I am a self taught software engineer, currently working at <a href="https://www.quantile.com/">Quantile</a>, a computational finance company focused on large scale optimization problems (acquired by <a href="https://www.lseg.com/en">lseg</a>). I am passionate about learning new subjects with a particular focus on applied math, computing, machine learning & AI. My focus over the past couple of years has been on machine learning and deep learning and data efficient software systems. As part of my learning, I love to create guides that help me (and hopefully others) understand what can sometimes be considered opaque and difficult subjects. I plan on using this page to showcase some of that work, as well as write about my journey into a software engineering through self study.</p>
+            <p>I have a MS from Columbia Engineering in Operations Research with a focus on ML / AI and a BS from the University of Virginia where I studied finance and math. Growing up, I played soccer ⚽️ at a very high level culminating in four years of Varsity Men's Soccer at UVA, which included a trip to the NCAA Final Four in 2013 and a National Championship in 2014.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Projects 👨🏻‍💻 </h2>
-        <div class="supplementary-pic">
-            <img src="images/profile.jpeg" alt="Profile Picture">
-            <figcaption>Giving a talk on Transformers at <a href="https://med.virginia.edu/advanced-medical-analytics/">UVA Center for Advanced Medical Analytics</a></figcaption>
-        </div>
-        <p>Here are some of the projects I've worked on: </p>
-        <ul>
-            <li>🤖<a href="https://github.com/ncorriveau/ood_computervision">Implement and train SOTA models, all configured in YAML </a> </li>
-            <li>🤓<a href="https://github.com/ncorriveau/math_helpers"> Walk thrus of concepts from Bayesian Inference to Energy Based DL on simple Manifolds</a></li>
-            <li>👀<a href="https://github.com/ncorriveau/ood_computervision"> Computer Vision for OOD Detection: my team finished 1st in the sub class classification at Columbia </a></li>
-            <li>🧑🏽‍⚕️<a href="https://github.com/ncorriveau/wilson">Wilson: a RAG based medical assistant application, to help make sense of your appointment data. </a></li>
-        </ul>
-    </section>
+        <section id="projects">
+            <h2>Projects 👨🏻‍💻 </h2>
+            <div class="supplementary-pic">
+                <!-- <img src="images/profile.jpeg" alt="Profile Picture">
+                <figcaption>Giving a talk on Transformers at <a href="https://med.virginia.edu/advanced-medical-analytics/">UVA Center for Advanced Medical Analytics</a></figcaption> -->
+            </div>
+            <p>Here are some of the projects I've worked on: </p>
+            <ul>
+                <li>🤖<a href="https://github.com/ncorriveau/ood_computervision">Implement and train SOTA models, all configured in YAML </a> </li>
+                <li>🤓<a href="https://github.com/ncorriveau/math_helpers"> Walk thrus of concepts from Bayesian Inference to Energy Based DL on simple Manifolds</a></li>
+                <li>👀<a href="https://github.com/ncorriveau/ood_computervision"> Computer Vision for OOD Detection: my team finished 1st in the sub class classification at Columbia </a></li>
+                <li>🧑🏽‍⚕️<a href="https://github.com/ncorriveau/wilson">Wilson: a RAG based medical assistant application, to help make sense of your appointment data. </a></li>
+            </ul>
+        </section>
 
-    <section id="education-career">
-        <h2>Education & Career</h2>
-        <h3>Education</h3>
-        <p>MS Columbia Engineering '23 - Operations Research with focus in ML/AI<br>
-           BS University of Virginia '17 - Finance with minor in Mathematics. Graduated with highest honors.</p>
-        <h3>Career</h3>
-        <p><strong>Quantile 2023-Present:</strong><br>
-        <p>Lead Software Engineer - building optimization applications. Python, AWS, touch of Typescript.</p>
-        <p><strong>mParticle 2021-2023:</strong><br>
-        <p>Wore many hats - ended up in Data Engineering.</p>
-        <p><strong>Citigroup 2017-2021:</strong><br>
-        <p>Traded fixed income, fell in love with python</p>
-    </section>
+        <section id="education-career">
+            <h2>Education & Career</h2>
+            <h3>Education</h3>
+            <p>MS Columbia Engineering '23 - Operations Research with focus in ML/AI<br>
+               BS University of Virginia '17 - Finance & Mathematics. Graduated with highest honors.</p>
+            <h3>Career</h3>
+            <p><strong>Quantile 2023-Present:</strong><br>
+            <p>Lead Software Engineer - building optimization applications. Python, AWS, touch of Typescript.</p>
+            <p><strong>mParticle 2021-2023:</strong><br>
+            <p>Wore many hats - ended up in Data Engineering.</p>
+            <p><strong>Citigroup 2017-2021:</strong><br>
+            <p>Traded fixed income (cash and derivatives), fell in love with python</p>
+        </section>
+    </div>
 </body>
 </html>
