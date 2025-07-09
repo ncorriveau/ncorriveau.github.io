@@ -1,5 +1,585 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Code highlighting styles */
+pre {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+code {
+    background: #f1f3f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+    color: #d63384;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.code-header {
+    background: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0;
+}
+
+.code-header + pre {
+    border-radius: 0 0 6px 6px;
+    margin-top: 0;
+}
+
+/* Syntax highlighting colors */
+.keyword { color: #0066cc; font-weight: bold; }
+.string { color: #009900; }
+.comment { color: #999; font-style: italic; }
+.number { color: #cc0000; }
+.function { color: #9900cc; }
+.variable { color: #cc6600; }
+
+/* Image styles */
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.blog-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blog-image-caption {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Enhanced blog post content */
+.blog-post-content {
+    margin-top: 15px;
+}
+
+.blog-post-content h4 {
+    color: #2c3e50;
+    margin: 20px 0 10px 0;
+    font-size: 1.1em;
+}
+
+.blog-post-content p {
+    margin-bottom: 15px;
+}
+
+.blog-post-content ul, .blog-post-content ol {
+    margin: 15px 0 15px 30px;
+}
+
+.blog-post-content li {
+    margin-bottom: 8px;
+}
+
+.blog-post-content blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Container and layout */
 .container {
-    max-width: 60ch; /* 60 characters wide */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add some padding for better readability */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header styles */
+header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact {
+    display: flex;
+    gap: 20px;
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation tabs */
+.nav-tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 30px;
+}
+
+.nav-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #666;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tab:hover {
+    color: #3498db;
+}
+
+.nav-tab.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+/* Tab content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Section styles */
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Blog specific styles */
+.blog-filters {
+    margin-bottom: 30px;
+}
+
+.filter-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-filter {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.tag-filter:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tag-filter.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Colored filter tags */
+.tag-filter[data-tag="AI"] {
+    background: #e3f2fd;
+    color: #1565c0;
+    border-color: #bbdefb;
+}
+
+.tag-filter[data-tag="AI"]:hover {
+    background: #bbdefb;
+}
+
+.tag-filter[data-tag="AI"].active {
+    background: #1565c0;
+    color: white;
+    border-color: #1565c0;
+}
+
+.tag-filter[data-tag="Machine Learning"] {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    border-color: #e1bee7;
+}
+
+.tag-filter[data-tag="Machine Learning"]:hover {
+    background: #e1bee7;
+}
+
+.tag-filter[data-tag="Machine Learning"].active {
+    background: #7b1fa2;
+    color: white;
+    border-color: #7b1fa2;
+}
+
+.tag-filter[data-tag="Deep Learning"] {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border-color: #c8e6c9;
+}
+
+.tag-filter[data-tag="Deep Learning"]:hover {
+    background: #c8e6c9;
+}
+
+.tag-filter[data-tag="Deep Learning"].active {
+    background: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.tag-filter[data-tag="Computer Vision"] {
+    background: #fff3e0;
+    color: #ef6c00;
+    border-color: #ffcc80;
+}
+
+.tag-filter[data-tag="Computer Vision"]:hover {
+    background: #ffcc80;
+}
+
+.tag-filter[data-tag="Computer Vision"].active {
+    background: #ef6c00;
+    color: white;
+    border-color: #ef6c00;
+}
+
+.tag-filter[data-tag="Distributed Systems"] {
+    background: #fce4ec;
+    color: #c2185b;
+    border-color: #f8bbd9;
+}
+
+.tag-filter[data-tag="Distributed Systems"]:hover {
+    background: #f8bbd9;
+}
+
+.tag-filter[data-tag="Distributed Systems"].active {
+    background: #c2185b;
+    color: white;
+    border-color: #c2185b;
+}
+
+.tag-filter[data-tag="Paper Review"] {
+    background: #f1f8e9;
+    color: #558b2f;
+    border-color: #dcedc8;
+}
+
+.tag-filter[data-tag="Paper Review"]:hover {
+    background: #dcedc8;
+}
+
+.tag-filter[data-tag="Paper Review"].active {
+    background: #558b2f;
+    color: white;
+    border-color: #558b2f;
+}
+
+.tag-filter[data-tag="Tutorial"] {
+    background: #e0f2f1;
+    color: #00695c;
+    border-color: #b2dfdb;
+}
+
+.tag-filter[data-tag="Tutorial"]:hover {
+    background: #b2dfdb;
+}
+
+.tag-filter[data-tag="Tutorial"].active {
+    background: #00695c;
+    color: white;
+    border-color: #00695c;
+}
+
+.tag-filter[data-tag="Programming"] {
+    background: #e0f2f1;
+    color: #00695c;
+    border-color: #b2dfdb;
+}
+
+.tag-filter[data-tag="Programming"]:hover {
+    background: #b2dfdb;
+}
+
+.tag-filter[data-tag="Tutorial"].active {
+    background: #00695c;
+    color: white;
+    border-color: #00695c;
+}
+
+
+/* Keep "All" filter with the original blue styling */
+.tag-filter[data-tag="all"] {
+    background: white;
+    color: #3498db;
+    border-color: #3498db;
+}
+
+.tag-filter[data-tag="all"]:hover {
+    background: #f8f9fa;
+}
+
+.tag-filter[data-tag="all"].active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.blog-post {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-post:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.blog-post-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.blog-post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Tag color schemes */
+.blog-tag:contains("AI") {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.blog-tag:contains("Machine Learning") {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.blog-tag:contains("Deep Learning") {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.blog-tag:contains("Computer Vision") {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.blog-tag:contains("Distributed Systems") {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.blog-tag:contains("Paper Review") {
+    background: #f1f8e9;
+    color: #558b2f;
+}
+
+.blog-tag:contains("Tutorial") {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.blog-tag:contains("Programming") {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+/* Alternative approach using data attributes for more reliable color matching */
+.blog-tag[data-tag="AI"] {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.blog-tag[data-tag="Machine Learning"] {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.blog-tag[data-tag="Deep Learning"] {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.blog-tag[data-tag="Computer Vision"] {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.blog-tag[data-tag="Distributed Systems"] {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.blog-tag[data-tag="Paper Review"] {
+    background: #f1f8e9;
+    color: #558b2f;
+}
+
+.blog-tag[data-tag="Tutorial"] {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.blog-tag[data-tag="Programming"] {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.blog-post-preview {
+    color: #555;
+    line-height: 1.5;
+}
+
+.blog-post-preview p {
+    margin-bottom: 0;
+}
+
+.no-posts {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
+
+    .tag-filters {
+        gap: 8px;
+    }
+
+    .tag-filter {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    pre {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .code-header {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
 }
