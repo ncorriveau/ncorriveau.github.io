@@ -368,14 +368,27 @@ pre code {
   padding-bottom: 1rem;
 }
 
-.intro__bio p:first-child {
-  font-size: var(--step-1);
-  color: var(--text);
-  line-height: 1.55;
+/* Every bio paragraph reads the same — no oversized lead paragraph. */
+.intro__bio p {
+  color: var(--text-muted);
 }
 
-.intro__bio p:not(:first-child) {
-  color: var(--text-muted);
+.intro__main {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.intro__bio {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.intro__photo {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .section-heading {
@@ -655,5 +668,15 @@ pre code {
     max-width: 100%;
     text-align: left;
     margin-left: 0;
+  }
+
+  /* Stack the bio photo above the text rather than squeezing it alongside. */
+  .intro__main {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .intro__photo {
+    width: 160px;
   }
 }

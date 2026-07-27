@@ -7,8 +7,14 @@ layout: default
     assistive tech and SEO but hidden visually — the bio is the visual lead.
   {%- endcomment -%}
   <h1 class="visually-hidden">{{ site.author.name }}</h1>
-  <div class="intro__bio prose">
-    {{ content }}
+  <div class="intro__main">
+    <div class="intro__bio prose">
+      {{ content }}
+    </div>
+    <img class="intro__photo"
+         src="{{ '/assets/img/nicko.webp' | relative_url }}"
+         alt="{{ site.author.name }} sitting on a dock by a lake with a dog"
+         width="720" height="960" loading="lazy">
   </div>
   {%- include social.html -%}
 </section>

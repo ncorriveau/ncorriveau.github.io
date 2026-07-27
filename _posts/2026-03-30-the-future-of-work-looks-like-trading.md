@@ -24,7 +24,7 @@ It turned out he was running Citi's algorithmic retail equity book — small siz
   <figcaption>Trading monitor setup as depicted in HBO's hit show Industry</figcaption>
 </figure>
 
-Since leaving trading, I've been working as a software engineer. But over the last six months — with the explosion of agentic systems — I keep thinking back to the guy who sat behind me.
+Since leaving trading, I've been working as a software engineer. But over the last six months, with the explosion of agentic systems, I keep thinking back to the guy who sat behind me.
 
 Increasingly, that's what our jobs are starting to look like.
 
