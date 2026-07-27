@@ -42,6 +42,12 @@ twitter:
 # Posts live at /blog/<slug>/
 permalink: /blog/:title/
 
+# GitHub Pages applies a default theme (jekyll-theme-primer) when none is set.
+# That theme ships assets/css/style.scss, which built to the same path as this
+# site's stylesheet and silently replaced it in production. Disable the theme;
+# the stylesheet is also named site.css so a collision cannot recur.
+theme:
+
 markdown: kramdown
 kramdown:
   input: GFM
