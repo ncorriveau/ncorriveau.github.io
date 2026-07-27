@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="wrap">
+    {%- include nav.html -%}
+    <main id="main">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      {%- comment -%}The home page already shows these in the intro.{%- endcomment -%}
+      {%- unless page.url == "/" -%}{%- include social.html -%}{%- endunless -%}
+      <p class="colophon">
+        &copy; {{ site.time | date: "%Y" }} {{ site.author.name }} ·
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

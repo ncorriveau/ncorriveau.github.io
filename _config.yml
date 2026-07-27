@@ -1,0 +1,75 @@
+title: Nicko Corriveau
+tagline: Nicko's Thoughts
+description: >-
+  A space to organize thoughts about science, technology, finance, and related
+  topics. Writing on AI, deep learning, computer systems, and markets.
+url: "https://ncorriveau.github.io"
+baseurl: ""
+lang: en
+# Post dates carry explicit +0000 offsets; render them in UTC so the displayed
+# date matches what was published rather than the builder's local timezone.
+timezone: UTC
+
+author:
+  name: Nicko Corriveau
+  email: ncorriveau13@gmail.com
+
+# Social links — rendered by _includes/social.html and consumed by jekyll-seo-tag
+social:
+  name: Nicko Corriveau
+  links:
+    - https://x.com/ncorriveau123
+    - https://www.linkedin.com/in/nicko-corriveau-96a553121/
+    - https://github.com/ncorriveau
+    - https://www.threads.com/@nicko_corriveau
+
+socials:
+  - name: X
+    url: https://x.com/ncorriveau123
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/nicko-corriveau-96a553121/
+  - name: GitHub
+    url: https://github.com/ncorriveau
+  - name: Threads
+    url: https://www.threads.com/@nicko_corriveau
+  - name: Email
+    url: mailto:ncorriveau13@gmail.com
+
+twitter:
+  username: ncorriveau123
+  card: summary
+
+# Posts live at /blog/<slug>/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+# Note: there is deliberately no default layout for pages. Asset files such as
+# assets/css/style.css need front matter for Jekyll to process them, which makes
+# them "pages" too — a default would wrap the stylesheet in HTML. Every real page
+# declares its own `layout:` instead.
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .jekyll-cache

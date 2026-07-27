@@ -1,0 +1,7 @@
+<ul class="socials">
+  {%- for s in site.socials -%}
+  <li>
+    <a href="{{ s.url }}"{% unless s.url contains 'mailto:' %} target="_blank" rel="me noopener"{% endunless %}>{{ s.name }}</a>
+  </li>
+  {%- endfor -%}
+</ul>

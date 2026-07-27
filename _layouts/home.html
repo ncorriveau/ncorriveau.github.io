@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<section class="intro">
+  {%- comment -%}
+    The name already appears in the site header, so the page heading is kept for
+    assistive tech and SEO but hidden visually — the bio is the visual lead.
+  {%- endcomment -%}
+  <h1 class="visually-hidden">{{ site.author.name }}</h1>
+  <div class="intro__bio prose">
+    {{ content }}
+  </div>
+  {%- include social.html -%}
+</section>
+
+{%- assign recent = site.posts | slice: 0, 3 -%}
+{%- if recent.size > 0 %}
+<section class="home-posts">
+  <h2 class="section-heading">Writing</h2>
+  <ul class="post-list">
+    {%- for post in recent %}
+    <li class="post-list__item">
+      <a class="post-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time class="post-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      {%- if post.excerpt %}
+      <p class="post-list__excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- if site.posts.size > 3 %}
+  <p class="more-link"><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
+  {%- endif %}
+</section>
+{%- endif %}
